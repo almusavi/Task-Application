@@ -1,0 +1,1 @@
+$("li#<%= @task.id %>").replaceWith("<%= j render partial: 'task_complete', locals: {task: @task} %>");

@@ -1,0 +1,11 @@
+<li class="task_item" id="<%= task.id %>">
+    <%= task.title %><br>
+ 	<% if task.is_done == false %>
+ 		<%= link_to "Complete Task", toggle_is_done_path(id: task.id), :method=> :patch, remote: true %>
+ 	<% else %>
+ 		Task is Complete
+ 	<% end %>
+
+    <%= link_to "delete", tasks_path(:task => task.id), format: "js", method: 'delete', remote: true %>
+    	<button class="upbutton">Up</button><button class="downbutton">Down</button>
+  </li>
