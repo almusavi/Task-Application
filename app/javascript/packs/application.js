@@ -10,6 +10,8 @@ require("channels")
 require('jquery')
 
 $(document).ready(function() {
+
+// move up code for up button on added tasks
 	$('body').on('click', '.upbutton', function () {
 	    var hook = $(this).closest('.task_item').prev('.task_item');
 	    if (hook.length) {
@@ -17,6 +19,8 @@ $(document).ready(function() {
 	        hook.before(elementToMove);
 	    }
 	});
+
+// move down code for down button on added tasks
 	$('body').on('click', '.downbutton', function () {
 	    var hook = $(this).closest('.task_item').next('.task_item');
 	    if (hook.length) {
@@ -24,7 +28,7 @@ $(document).ready(function() {
 	        hook.after(elementToMove);
 	    }
 	});
-
+// clear form text field after submit
 	$('body').on('click', '.form_submit', function (e) {
 		setTimeout(
 			function()
