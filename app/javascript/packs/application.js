@@ -24,6 +24,16 @@ $(document).ready(function() {
 	        hook.after(elementToMove);
 	    }
 	});
+
+	$('body').on('click', '.form_submit', function (e) {
+		setTimeout(
+			function()
+			{
+				$('.form_text_field').val('');
+
+			}, 1000);
+	});
+
 });
 
 

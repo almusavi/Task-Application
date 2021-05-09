@@ -2,11 +2,11 @@
 
 <%= form_for Task.new, remote: true do |f| %>
 	<div class="form-group">
-		<%= f.text_field :title, placeholder: "Enter a task" %>
+		<%= f.text_field :title, placeholder: "Enter a task", :class => "form_text_field" %>
 	</div>
 
 	<div class="form-group">
-  		<%= f.submit %>
+  		<%= f.submit 'submit task', :class => "form_submit"  %>
   	</div>
  <% end %>
 <ul>
@@ -26,4 +26,5 @@
   </li>
 <% end %>
 </ul>
+
 
